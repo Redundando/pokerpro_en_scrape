@@ -91,6 +91,9 @@ def compress_image(filename="", max_size=95000, min_quality=10):
 
 def download_image(image_url=""):
     filename = "images/" + image_url.split("/")[-1]
+    if not os.path.exists("images/"):
+        os.makedirs("images/")
+
     r = requests.get(image_url, stream=True)
     if r.status_code == 200:
         r.raw.decode_content = True

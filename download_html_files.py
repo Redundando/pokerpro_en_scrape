@@ -1,5 +1,6 @@
 import csv
 import json
+import os.path
 import urllib.request
 from glob import glob
 
@@ -110,8 +111,12 @@ def get_page_information(url="", download_images = True, args=None):
 def save_page_json(page_json={}, sub_directory=""):
     filename = filename_from_url(url=page_json["article_url"])
     directory = "json_files/"
+    if not os.path.exists(directory):
+        os.makedirs(directory)
     if sub_directory != "":
         directory = "json_files/" + sub_directory + "/"
+        if not os.path.exists(directory):
+            os.makedirs(directory)
     with open(directory + filename, 'w', encoding='utf-8') as file:
         json.dump(page_json, file, ensure_ascii=False, indent=4)
 
