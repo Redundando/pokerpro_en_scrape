@@ -291,10 +291,3 @@ def run_all(urls=None, filter="", limit=None, stop_on_error=True, download_image
         pass
     for url in (urls[0:limit] if limit else urls):
         download_page(url, stop_on_error=stop_on_error, download_images = download_images)
-
-
-if __name__ == "__main__":
-    run_all(urls=get_urls_from_sitemap(), filter="posts", stop_on_error=False)
-    #download_page(url="https://en.pokerpro.cc/play-now/betkings.html")
-    # download_page(url="https://en.pokerpro.cc/play-now/coral-poker.html")
-    # print(get_error_urls())

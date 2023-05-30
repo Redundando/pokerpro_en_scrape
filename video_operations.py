@@ -83,6 +83,3 @@ def download_all_videos(stop_on_error=True, limit=None):
     for category_page in video_category_pages:
         download_video_category(category_page, stop_on_error)
 
-
-if __name__ == "__main__":
-    download_all_videos(stop_on_error=False)

@@ -80,6 +80,3 @@ def save_all_jsons_as_xml():
     data = readfromstring(jsons)
     print(json2xml.Json2xml(data).to_xml())
 
-
-if __name__ == "__main__":
-    save_combined_jsons(filter="posts")

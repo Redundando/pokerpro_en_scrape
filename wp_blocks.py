@@ -23,10 +23,3 @@ def div(soup: BeautifulSoup = None) -> BeautifulSoup:
     for child in soup.children:
         html+=str(child)
     return BeautifulSoup(html, "html.parser")
-
-
-if __name__ == "__main__":
-    s = BeautifulSoup("<div><h2>TEST</h2></div>", "html.parser")
-    print(s)
-    s.h2.unwrap()
-    print(s)
