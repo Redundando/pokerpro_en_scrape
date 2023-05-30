@@ -1,6 +1,28 @@
 # PokerProCC Scraper
 
+## Requirements
+
+Packages needed:
+
+- beautifulsoup4
+- json2xml
+- requests
+- Pillow
+- reportlab
+- svglib
+
+## Run Project
+
 Run `main.py` to run the entire script. The process will take some minutes.
+
+## Uploading data to WordPress
+
+After the script is run, the following actions need to be taken to import the data to wordpress:
+- Upload all images into the media library
+- Import `articles-casinos.json`, `articles-posts.json`, `articles-videos.json` via WP all import plugin
+  - Full version needed (contact `arved.kloehn@gmail.com` for access)
+  - All fields need to be connected correctly in the plugin before import
+
 
 ## Actions taken
 
@@ -35,18 +57,11 @@ Run `main.py` to run the entire script. The process will take some minutes.
 - Converts Twitter Embeds into WP block (if in post body)
 - Converts Youtube Embeds into WP block (if in post body)
 
-## Information that needs to entered manually:
+## Information that needs to entered manually
 
 - Short bonus text for each operator (in `bonus.py`)
 - Operator rating (in `ratings.py`)
 
-## Uploading data to WordPress
-
-After the script is run, the following actions need to be taken to import the data to wordpress:
-- Upload all images into the media library
-- Import `articles-casinos.json`, `articles-posts.json`, `articles-videos.json` via WP all import plugin
-  - Full version needed (contact `arved.kloehn@gmail.com` for access)
-  - All fields need to be connected correctly in the plugin before import
 
 ## Open Issues
 
